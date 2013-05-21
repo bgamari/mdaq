@@ -1,0 +1,189 @@
+[options]
+# wordswap swaps labels if the pin is on the right side an looks like this:
+#   "PB1 (CLK)". That's useful for micro controller port labels
+# rotate_labels rotates the pintext of top and bottom pins
+#   this is useful for large symbols like FPGAs with more than 100 pins
+# sort_labels will sort the pins by it's labels
+#   useful for address ports, busses, ...
+wordswap=yes
+rotate_labels=yes
+sort_labels=no
+generate_pinseq=yes
+sym_width=16000
+pinwidthvertical=400
+pinwidthhorizontal=400
+
+[geda_attr]
+# name will be printed in the top of the symbol
+# name is only some graphical text, not an attribute
+# version specifies a gschem version.
+# if you have a device with slots, you'll have to use slot= and slotdef=
+# use comment= if there are special information you want to add
+version=20060113 1
+name=LPC4330
+device=LPC4330
+refdes=U?
+footprint=LQFP144
+description=Dual-core ARM microcontroller
+author=Ben Gamari <bgamari@gmail.com>
+numslots=0
+
+[pins]
+# tabseparated list of pin descriptions
+# ----------------------------------------
+# pinnr is the physical number of the pin
+# seq is the pinseq= attribute, leave it blank if it doesn't matter
+# type can be (in, out, io, oc, oe, pas, tp, tri, clk, pwr)
+# style can be (line,dot,clk,dotclk,none). none if only want to add a net
+# posit. can be (l,r,t,b) or empty for nets
+# net specifies the name of the net. Vcc or GND for example.
+# label represents the pinlabel.
+#	negation lines can be added with "\_" example: \_enable\_ 
+#	if you want to write a "\" use "\\" as escape sequence
+#-----------------------------------------------------
+#pinnr	seq	type	style	posit.	net	label	
+#-----------------------------------------------------
+1	47	io	line	l		P4_0
+2	110	in	line	l		ADC0_1/ADC1_1
+3	48	io	line	l		P4_1
+4	140	pwr	line	l		VSSIO
+5	132	pwr	line	l		VDDIO
+6	109	io	line	l		ADC0_0/ADC1_0/DAC
+7	50	io	line	l		P4_3
+8	49	io	line	l		P4_2
+9	51	io	line	l		P4_4
+10	52	io	line	l		P4_5
+11	53	io	line	l		P4_6
+12	120	clk	line	l		XTAL1
+13	121	clk	line	l		XTAL2
+14	54	io	line	l		P4_7
+15	55	io	line	l		P4_8
+16	122	pwr	line	l		USB0_VDDA3V3_DRIVER
+17	123	pwr	line	l		USB0_VDDA3V3
+18	98	io	line	l		USB0_DP
+19	124	pwr	line	l		USB0_VSSA_TERM
+20	99	io	line	l		USB0_DM
+21	100	io	line	l		USB0_VBUS
+22	101	io	line	l		USB0_ID
+23	125	pwr	line	l		USB0_VSSA_REC
+24	102	io	line	l		USB0_RREF
+25	131	pwr	line	l		VDDREG
+26	97	io	line	l		TDI
+27	93	io	line	l		TCK
+28	92	io	line	l		DBGEN
+29	94	io	line	l		\_TRST\_
+30	95	io	line	l		TMS
+31	96	io	line	l		TDO
+32	1	io	line	l		P0_0
+33	56	io	line	l		P4_9
+34	2	io	line	l		P0_1
+35	57	io	line	l		P4_10
+36	133	pwr	line	l		VDDIO
+37	58	io	line	b		P5_0
+38	3	io	line	b		P1_0
+39	59	io	line	b		P5_1
+40	141	pwr	line	b		VSSIO
+41	134	pwr	line	b		VDDIO
+42	4	io	line	b		P1_1
+43	5	io	line	b		P1_2
+44	6	io	line	b		P1_3
+45	90	io	line	b		CLK0
+46	60	io	line	b		P5_2
+47	7	io	line	b		P1_4
+48	8	io	line	b		P1_5
+49	9	io	line	b		P1_6
+50	10	io	line	b		P1_7
+51	11	io	line	b		P1_8
+52	12	io	line	b		P1_9
+53	13	io	line	b		P1_10
+54	61	io	line	b		P5_3
+55	14	io	line	b		P1_11
+56	15	io	line	b		P1_12
+57	62	io	line	b		P5_4
+58	63	io	line	b		P5_5
+59	130	pwr	line	b		VDDREG
+60	16	io	line	b		P1_13
+61	17	io	line	b		P1_14
+62	18	io	line	b		P1_15
+63	64	io	line	b		P5_6
+64	19	io	line	b		P1_16
+65	65	io	line	b		P5_7
+66	20	io	line	b		P1_17
+67	21	io	line	b		P1_18
+68	22	io	line	b		P1_19
+69	87	io	line	b		P9_5
+70	23	io	line	b		P1_20
+71	135	pwr	line	b		VDDIO
+72	88	io	line	b		P9_6
+108	37	io	line	r		P2_13
+107	137	pwr	line	r		VDDIO
+106	36	io	line	r		P2_12
+105	35	io	line	r		P2_11
+104	34	io	line	r		P2_10
+103	78	io	line	r		P6_12
+102	33	io	line	r		P2_9
+101	77	io	line	r		P6_11
+100	76	io	line	r		P6_10
+99	91	io	line	r		CLK2
+98	32	io	line	r		P2_8
+97	75	io	line	r		P6_9
+96	31	io	line	r		P2_7
+95	30	io	line	r		P2_6
+94	128	pwr	line	r		VDDREG
+92	106	io	line	r		I2C0_SDA
+92	105	io	line	r		I2C0_SCL
+91	29	io	line	r		P2_5
+90	104	io	line	r		USB1_DM
+89	103	io	line	r		USB1_DP
+88	28	io	line	r		P2_4
+87	27	io	line	r		P2_3
+86	74	io	line	r		P6_8
+85	73	io	line	r		P6_7
+84	26	io	line	r		P2_2
+83	72	io	line	r		P6_6
+82	71	io	line	r		P6_5
+81	25	io	line	r		P2_1
+80	70	io	line	r		P6_4
+79	69	io	line	r		P6_3
+78	68	io	line	r		P6_2
+77	136	pwr	line	r		VDDIO
+76	142	pwr	line	r		VSSIO
+75	24	io	line	r		P2_0
+74	67	io	line	r		P6_1
+73	66	io	line	r		P6_0
+144	114	in	line	t		ADC0_5/ADC1_0
+143	111	in	line	t		ADC0_2/ADC1_0
+142	115	in	line	t		ADC0_6/ADC1_0
+141	139	pwr	line	t		VDDIO
+140	86	io	line	t		P7_7
+139	112	in	line	t		ADC0_3/ADC1_0
+138	113	in	line	t		ADC0_4/ADC1_0
+137	126	pwr	line	t		VDDA
+136	116	in	line	t		ADC0_7/ADC1_0
+135	144	pwr	line	t		VSSA
+134	85	io	line	t		P7_6
+133	84	io	line	t		P7_5
+132	83	io	line	t		P7_4
+131	129	pwr	line	t		VDDREG
+130	108	io	line	t		WAKEUP0
+129	117	out	line	t		RTC_ALARM
+128	107	io	line	t		\_RESET\_
+127	127	pwr	line	t		VBAT
+126	119	clk	line	t		RTCX2
+125	118	clk	line	t		RTCX1
+124	46	io	line	t		P3_8
+123	45	io	line	t		P3_7
+122	44	io	line	t		P3_6
+121	43	io	line	t		P3_5
+120	89	io	line	t		PF_4
+119	42	io	line	t		P3_4
+118	41	io	line	t		P3_3
+117	82	io	line	t		P7_3
+116	40	io	line	t		P3_2
+115	81	io	line	t		P7_2
+114	39	io	line	t		P3_1
+113	80	io	line	t		P7_1
+112	38	io	line	t		P3_0
+111	138	pwr	line	t		VDDIO
+110	79	io	line	t		P7_0
+109	143	pwr	line	t		VSSIO
