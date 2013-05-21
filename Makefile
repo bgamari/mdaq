@@ -1,4 +1,4 @@
-name=myproject
+name=mdaq
 
 %.sym : %.tsym
 	tragesym $< $@
