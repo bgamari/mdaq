@@ -1,1 +1,5 @@
+schematics mdaq.sch
+
+output-name mdaq
+skip-m4
 
