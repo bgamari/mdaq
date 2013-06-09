@@ -130,7 +130,7 @@ numslots=0
 96	31	io	line	r		P2_7
 95	30	io	line	r		P2_6
 94	128	pwr	line	r		VDDREG
-92	106	io	line	r		I2C0_SDA
+93	106	io	line	r		I2C0_SDA
 92	105	io	line	r		I2C0_SCL
 91	29	io	line	r		P2_5
 90	104	io	line	r		USB1_DM
