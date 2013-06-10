@@ -5,7 +5,7 @@ FileVersion[20091103]
 
 PCB["mDAQ" 6000.00mil 5000.00mil]
 
-Grid[1000.000000 0.0000 0.0000 0]
+Grid[2500.000000 0.0000 0.0000 0]
 PolyArea[200000000.000000]
 Thermal[0.500000]
 DRC[6.00mil 10.00mil 6.00mil 10.00mil 15.00mil 8.00mil]
@@ -786,7 +786,7 @@ Symbol['~' 12.00mil]
 	SymbolLine[20.00mil 35.00mil 25.00mil 30.00mil 8.00mil]
 )
 Attribute("PCB::grid::unit" "mil")
-Attribute("PCB::grid::size" "10.00mil")
+Attribute("PCB::grid::size" "25.00mil")
 Via[3170.00mil 575.00mil 36.00mil 20.00mil 0.0000 20.00mil "" "thermal(3X)"]
 Via[3285.00mil 575.00mil 36.00mil 20.00mil 0.0000 20.00mil "" "thermal(3X)"]
 Via[3345.00mil 575.00mil 36.00mil 20.00mil 0.0000 20.00mil "" "thermal(3X)"]
@@ -920,6 +920,7 @@ Via[1370.00mil 970.00mil 60.00mil 20.00mil 0.0000 35.00mil "" ""]
 Via[43.08mil 1470.00mil 60.00mil 20.00mil 0.0000 35.00mil "" "thermal(3X)"]
 Via[440.00mil 1460.00mil 60.00mil 20.00mil 0.0000 35.00mil "" "thermal(3X)"]
 Via[180.00mil 1530.00mil 60.00mil 20.00mil 0.0000 35.00mil "" "thermal(3X)"]
+Via[3625.00mil 1400.00mil 60.00mil 20.00mil 0.0000 35.00mil "" ""]
 
 Element["" "0603" "C11" "unknown" 310.00mil 41.4899mm 56.43mil -1.7229mm 0 100 ""]
 (
@@ -2278,6 +2279,28 @@ Element["" "0603" "C1" "unknown" 176.54mil 1590.00mil -3.4221mm -0.7557mm 0 100 
 	ElementLine [-70.11mil 34.68mil 70.11mil 34.68mil 10.00mil]
 
 	)
+
+Element["onsolder" "0603" "C41" "100n" 91.2251mm 1450.00mil -70.11mil 2.6510mm 0 100 "auto"]
+(
+	Pad[-35.43mil 0.0000 -31.49mil 0.0000 39.37mil 20.00mil 45.37mil "input" "1" "onsolder,square"]
+	Pad[31.49mil 0.0000 35.43mil 0.0000 39.37mil 20.00mil 45.37mil "input" "2" "onsolder,square,edge2"]
+	ElementLine [-70.11mil -34.68mil -70.11mil 34.68mil 10.00mil]
+	ElementLine [-70.11mil 34.68mil 70.11mil 34.68mil 10.00mil]
+	ElementLine [70.11mil 34.68mil 70.11mil -34.68mil 10.00mil]
+	ElementLine [70.11mil -34.68mil -70.11mil -34.68mil 10.00mil]
+
+	)
+
+Element["onsolder" "0603" "C40" "100n" 91.2251mm 1350.00mil -70.11mil 2.6510mm 0 100 "auto"]
+(
+	Pad[-35.43mil 0.0000 -31.49mil 0.0000 39.37mil 20.00mil 45.37mil "input" "1" "onsolder,square"]
+	Pad[31.49mil 0.0000 35.43mil 0.0000 39.37mil 20.00mil 45.37mil "input" "2" "onsolder,square,edge2"]
+	ElementLine [-70.11mil -34.68mil -70.11mil 34.68mil 10.00mil]
+	ElementLine [-70.11mil 34.68mil 70.11mil 34.68mil 10.00mil]
+	ElementLine [70.11mil 34.68mil 70.11mil -34.68mil 10.00mil]
+	ElementLine [70.11mil -34.68mil -70.11mil -34.68mil 10.00mil]
+
+	)
 Layer(1 "component")
 (
 	Line[80.0702mm 624.35mil 80.0702mm 592.63mil 10.00mil 20.00mil "clearline"]
@@ -3083,6 +3106,8 @@ Layer(1 "component")
 	Line[550.00mil 1620.00mil 550.00mil 1790.00mil 25.00mil 20.00mil "clearline"]
 	Line[550.00mil 1790.00mil 540.00mil 1800.00mil 25.00mil 20.00mil "clearline"]
 	Line[450.00mil 1730.00mil 450.00mil 1790.00mil 25.00mil 20.00mil "clearline"]
+	Line[3625.00mil 1400.00mil 91.3846mm 1400.00mil 10.00mil 20.00mil "clearline"]
+	Line[91.3846mm 1400.00mil 91.1748mm 35.7698mm 10.00mil 20.00mil "clearline"]
 )
 Layer(2 "solder")
 (
@@ -3258,6 +3283,8 @@ Layer(2 "solder")
 	Line[35.2278mm 890.00mil 1430.00mil 890.00mil 25.00mil 20.00mil ""]
 	Line[35.2278mm 820.00mil 1430.00mil 820.00mil 25.00mil 20.00mil ""]
 	Line[3030.00mil 870.00mil 3930.00mil 870.00mil 25.00mil 20.00mil "clearline"]
+	Line[3625.00mil 1450.00mil 3625.00mil 1350.00mil 10.00mil 20.00mil "clearline"]
+	Line[90.3752mm 1350.00mil 90.3752mm 1450.00mil 10.00mil 20.00mil ""]
 )
 Layer(3 "outline")
 (
@@ -3513,6 +3540,12 @@ NetList()
 		Connect("U5-34")
 		Connect("U6-15")
 	)
+	Net("DAC_REF" "(unknown)")
+	(
+		Connect("C40-2")
+		Connect("C41-2")
+		Connect("U6-8")
+	)
 	Net("DAC_SCK" "(unknown)")
 	(
 		Connect("U5-68")
@@ -3560,6 +3593,8 @@ NetList()
 		Connect("C37-1")
 		Connect("C38-1")
 		Connect("C39-1")
+		Connect("C40-1")
+		Connect("C41-1")
 		Connect("CONN1-9")
 		Connect("CONN1-10")
 		Connect("CONN3-2")
