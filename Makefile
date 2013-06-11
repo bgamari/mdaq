@@ -42,6 +42,7 @@ gerbers.zip : gerbers
 
 .PHONY : osh-park-gerbers
 osh-park-gerbers : gerbers
+	rm -Rf $@
 	mkdir -p $@
 	cp gerbers/$(name).top.gbr "$@/Top Layer.ger"
 	cp gerbers/$(name).bottom.gbr "$@/Bottom Layer.ger"
@@ -56,3 +57,19 @@ osh-park-gerbers.zip : osh-park-gerbers
 	rm -f $@
 	zip -j $@ osh-park-gerbers/*
 
+hackvana-gerbers : gerbers
+	rm -Rf $@
+	mkdir -p $@
+	cp gerbers/$(name).top.gbr $@/$(name).front.gtl
+	cp gerbers/$(name).bottom.gbr $@/$(name).back.gbl
+	cp gerbers/$(name).topmask.gbr $@/$(name).frontmask.gts
+	cp gerbers/$(name).bottommask.gbr $@/$(name).backmask.gbs
+	cp gerbers/$(name).topsilk.gbr $@/$(name).frontsilk.gto
+	cp gerbers/$(name).bottomsilk.gbr $@/$(name).backsilk.gbo
+	cp gerbers/$(name).outline.gbr $@/$(name).outline.gbr
+	cp gerbers/$(name).plated-drill.cnc $@/$(name).plated-drill.cnc
+
+hackvana-gerbers.zip : hackvana-gerbers
+	rm -f $@
+	zip -j $@ hackvana-gerbers/*
+	@echo "Be sure to add a version number to the zip file name"
