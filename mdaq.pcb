@@ -1220,7 +1220,7 @@ Element["onsolder" "0603" "R13" "12k" 27.4711mm 978.08mil -40.11mil -0.9050mm 0 
 
 	)
 
-Element["" "0603" "C23" "unknown" 27.4711mm 978.08mil -50.11mil 1.1590mm 0 100 ""]
+Element["" "0603" "C23" "100n" 27.4711mm 978.08mil -50.11mil 1.1590mm 0 100 ""]
 (
 	Pad[-35.43mil 0.0000 -31.49mil 0.0000 39.37mil 20.00mil 45.37mil "input" "1" "square"]
 	Pad[31.49mil 0.0000 35.43mil 0.0000 39.37mil 20.00mil 45.37mil "input" "2" "square,edge2"]
@@ -1231,7 +1231,7 @@ Element["" "0603" "C23" "unknown" 27.4711mm 978.08mil -50.11mil 1.1590mm 0 100 "
 
 	)
 
-Element["" "0603" "C21" "unknown" 875.00mil 683.46mil -128.57mil -1.5959mm 0 100 ""]
+Element["" "0603" "C21" "18p" 875.00mil 683.46mil -128.57mil -1.5959mm 0 100 ""]
 (
 	Pad[0.0000 31.49mil 0.0000 35.43mil 39.37mil 20.00mil 45.37mil "input" "1" "square,edge2"]
 	Pad[0.0000 -35.43mil 0.0000 -31.49mil 39.37mil 20.00mil 45.37mil "input" "2" "square"]
@@ -1242,7 +1242,7 @@ Element["" "0603" "C21" "unknown" 875.00mil 683.46mil -128.57mil -1.5959mm 0 100
 
 	)
 
-Element["" "0603" "C22" "unknown" 1050.00mil 875.00mil -180.11mil -0.8730mm 0 100 ""]
+Element["" "0603" "C22" "18p" 26.4551mm 861.54mil -180.11mil -0.8730mm 0 100 ""]
 (
 	Pad[-35.43mil 0.0000 -31.49mil 0.0000 39.37mil 20.00mil 45.37mil "input" "1" "square"]
 	Pad[31.49mil 0.0000 35.43mil 0.0000 39.37mil 20.00mil 45.37mil "input" "2" "square,edge2"]
@@ -1264,13 +1264,13 @@ Element["onsolder" "0603" "R1" "10k" 48.5531mm 758.08mil -1.6050mm -1.0615mm 0 1
 
 	)
 
-Element["onsolder" "0603" "R4" "unknown" 30.1869mm 27.7642mm -3.7346mm 0.7166mm 0 100 "auto"]
+Element["onsolder" "0603" "R4" "10k" 30.0751mm 27.7731mm -3.7346mm 0.7166mm 0 100 "auto"]
 (
 	Pad[31.49mil 0.0000 35.43mil 0.0000 39.37mil 20.00mil 45.37mil "input" "1" "onsolder,square,edge2"]
 	Pad[-35.43mil 0.0000 -31.49mil 0.0000 39.37mil 20.00mil 45.37mil "input" "2" "onsolder,square"]
-	ElementLine [70.11mil 34.68mil 70.11mil -34.68mil 10.00mil]
+	ElementLine [70.11mil -34.68mil 70.11mil 34.68mil 10.00mil]
 	ElementLine [-70.11mil -34.68mil 70.11mil -34.68mil 10.00mil]
-	ElementLine [-70.11mil 34.68mil -70.11mil -34.68mil 10.00mil]
+	ElementLine [-70.11mil -34.68mil -70.11mil 34.68mil 10.00mil]
 	ElementLine [-70.11mil 34.68mil 70.11mil 34.68mil 10.00mil]
 
 	)
@@ -2078,7 +2078,7 @@ Element["" "0603" "C27" "100n" 83.6051mm 1075.00mil -70.11mil -2.6510mm 0 100 ""
 
 	)
 
-Element["onsolder" "0603" "R18" "unknown" 290.00mil 816.54mil -34.37mil 89.89mil 1 100 "auto"]
+Element["onsolder" "0603" "R18" "10k" 290.00mil 816.54mil -34.37mil 89.89mil 1 100 "auto"]
 (
 	Pad[0.0000 -35.43mil 0.0000 -31.49mil 39.37mil 20.00mil 45.37mil "input" "1" "onsolder,square"]
 	Pad[0.0000 31.49mil 0.0000 35.43mil 39.37mil 20.00mil 45.37mil "input" "2" "onsolder,square,edge2"]
@@ -2181,14 +2181,14 @@ Element["" "0603" "VCC_LED" "unknown" 245.00mil 1320.00mil -170.11mil -2.6510mm 
 
 	)
 
-Element["onsolder" "0603" "R5" "unknown" 30.1869mm 29.5422mm -140.11mil 0.8730mm 0 100 "auto"]
+Element["onsolder" "0603" "R5" "10k" 30.1869mm 29.5422mm -140.11mil 0.8730mm 0 100 "auto"]
 (
 	Pad[-35.43mil 0.0000 -31.49mil 0.0000 39.37mil 20.00mil 45.37mil "input" "1" "onsolder,square"]
 	Pad[31.49mil 0.0000 35.43mil 0.0000 39.37mil 20.00mil 45.37mil "input" "2" "onsolder,square,edge2"]
 	ElementLine [-70.11mil -34.68mil -70.11mil 34.68mil 10.00mil]
 	ElementLine [-70.11mil 34.68mil 70.11mil 34.68mil 10.00mil]
-	ElementLine [70.11mil 34.68mil 70.11mil -34.68mil 10.00mil]
-	ElementLine [70.11mil -34.68mil -70.11mil -34.68mil 10.00mil]
+	ElementLine [70.11mil -34.68mil 70.11mil 34.68mil 10.00mil]
+	ElementLine [-70.11mil -34.68mil 70.11mil -34.68mil 10.00mil]
 
 	)
 
