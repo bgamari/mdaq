@@ -1,6 +1,6 @@
 # mDAQ
 
-The mDAQ is a USB device for data acquisition and feedback control tasks.
+The mDAQ is a low-cost yet flexible USB device for data acquisition and feedback control tasks.
 In short, the device includes,
 
  * An eight channel 200 ksample/second 16-bit analog-to-digital converter (Analog Devices' AD7606)
